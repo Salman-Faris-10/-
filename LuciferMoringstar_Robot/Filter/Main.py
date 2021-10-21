@@ -53,7 +53,7 @@ async def filter(client, message):
     if 2 < len(message.text) < 100:    
         btn = []
         search = message.text
-        mo_tech_yt = f"**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n**📤 Uploaded by {message.chat.title}**"
+        FM_FilmMania = f"**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n**📤 Uploaded by {message.chat.title}**"
         files = await get_filter_results(query=search)
         if files:
             for file in files:
@@ -115,7 +115,7 @@ async def group(client, message):
     if 2 < len(message.text) < 50:    
         btn = []
         search = message.text
-        mo_tech_yt = f"**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n**📤 Uploaded by {message.chat.title}**"
+        FM_FilmMania = f"**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n**📤 Uploaded by {message.chat.title}**"
         nyva=BOT.get("username")
         if not nyva:
             botusername=await client.get_me()
@@ -291,7 +291,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "help":
             buttons = [[
                 InlineKeyboardButton('Update Channel', url='https://t.me/FM_Update'),
-                InlineKeyboardButton('Source Code', url="https://github.com/Salman-Faris-10/SalmanulFaris")
+                InlineKeyboardButton('Source Code', url="https://github.com/Salman-Faris-10")
                 ],[
                 InlineKeyboardButton('💫Deploy Video💫', url=f'{TUTORIAL}')
                 ]]
