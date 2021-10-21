@@ -84,7 +84,7 @@ async def start(bot, message):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('🗣️ Series Channel ', url='https://t.me/FM_SERIES')
+                        InlineKeyboardButton('➕ ᗩᗪᗪ ᗰE TO YOᑌᖇ GᖇOᑌᑭᑭ ➕ ', url='https://t.me/SKM_Movis_World_Bot?startgroup=true')
                     ],
                     [
                         InlineKeyboardButton('🔍 Search again 🔎', switch_inline_query_current_chat='')
@@ -113,7 +113,7 @@ async def start(bot, message):
         )
     else:
         await message.reply_text(
-            START_MSG.format(message.from_user.mention),
+            START_MSG.format (https://telegra.ph/file/75166c6ef219b186d8da8.jpg)(message.from_user.mention),
             parse_mode="Markdown",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -125,17 +125,24 @@ async def start(bot, message):
                             ),
                         InlineKeyboardButton
                             (
-                                "🤖 Bot Master 🤖", url="https://t.me/FM_Admin_owner"
+                                "🤖 Bot creater 🤖", url="https://t.me/FM_Admin_owner"
+                            )
+                            InlineKeyboardButton
+                            (
+                                "🤵🏻 Bot Admin 🤵🏻", url="https://t.me/JustinJaise"
+                            )InlineKeyboardButton
+                            (
+                                "➕ ᗩᗪᗪ ᗰE TO YOᑌᖇ GᖇOᑌᑭᑭ ➕", url="https://t.me/SKM_Movis_World_Bot?startgroup=true"
                             )
                     ],
                     [
                         InlineKeyboardButton
                             (
-                                "🤔Help", callback_data="help"
+                                "⛑️ Help", callback_data="help"
                             ),
                         InlineKeyboardButton
                             (
-                                "About🤠", callback_data="about"
+                                "About💡", callback_data="about"
                             )
                     ]
                 ]
@@ -300,7 +307,7 @@ async def total(bot, message):
     msg = await message.reply("Processing...⏳", quote=True)
     try:
         total = await Media.count_documents()
-        await msg.edit(f'📁 Saved files: {total}')
+        await msg.edit(f'📁 Saved files: {total}'🥴)
     except Exception as e:
         logger.exception('Failed to check total files')
         await msg.edit(f'Error: {e}')
